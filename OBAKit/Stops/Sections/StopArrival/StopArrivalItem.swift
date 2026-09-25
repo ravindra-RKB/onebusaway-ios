@@ -193,7 +193,7 @@ nonisolated struct ArrivalDepartureContentConfiguration: OBAContentConfiguration
     }
 
     var accessibilityTimeLabelText: String? {
-        return formatters?.timeFormatter.string(from: viewModel.arrivalDepartureDate)
+        return formatters?.formattedClockTime(viewModel.arrivalDepartureDate)
     }
 
     var accessibilityScheduleDeviationText: String? {
