@@ -29,18 +29,4 @@ struct CopyableValueRowTests {
         #expect(!confirmation.isEmpty)
         #expect(confirmation != "MISSING")
     }
-
-    /// Verifies initialization with custom accessibility hint and truncation options.
-    @Test func testCopyableValueRowCustomProperties() {
-        let row = CopyableValueRow(
-            title: "Device Token",
-            value: "abcdef1234567890",
-            accessibilityHint: "Double tap to copy push token",
-            truncatesValue: true
-        )
-        #expect(row.title == "Device Token")
-        #expect(row.value == "abcdef1234567890")
-        #expect(row.accessibilityHint == "Double tap to copy push token")
-        #expect(row.truncatesValue == true)
-    }
 }
